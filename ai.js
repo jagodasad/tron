@@ -55,6 +55,7 @@ const update = state => {
   // I filter again to keep coords that are free
   const available = coordsInBound.filter(isFree)
 
-  // And I return a random available coord
-  return pickRandom(available)
+  // always return the first free coordinates
+return coordsInBound.filter(isFree)[0];
+
 }
